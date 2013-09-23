@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml2/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Box</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.transit.min.js"></script>
+<script type="text/javascript" src="js/sky_falling.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		if ( $('.leaves').length ) {
+			$('.leaves .animationwrapper').skyfall({ speed: 5, wind: 3, rotation: 1, varyRotation: 1 });
+		}
+		if ( $('.circles').length ) {
+			$('.circles .animationwrapper').skyfall({ xStrafeMod: 2, speed: 2, minSpeed: 1, varySize: 0 });
+		}
+		if ( $('.rocks').length ) {
+			$('.rocks .animationwrapper').skyfall({ xStrafeMod: 0, speed: 9, minSpeed: 7, rotation: 5, varySpin: 1 });
+		}
+	});
+</script>
+
+<style>
+	
+	div[class^='circles'] { border-radius: 50%; }
+
+	.rocks .color0 { background: url('images/rock1.png') no-repeat; background-size: cover; }
+	.rocks .color1 { background: url('images/rock2.png') no-repeat; background-size: cover; }
+	.rocks .color2 { background: url('images/rock3.png') no-repeat; background-size: cover; }
+	.rocks .color3 { background: url('images/rock4.png') no-repeat; background-size: cover; }
+	.rocks .color4 { background: url('images/rock5.png') no-repeat; background-size: cover; }
+
+	.leaves .color0 { background: url('images/leaf1.png') no-repeat; background-size: cover; }
+	.leaves .color1 { background: url('images/leaf1.png') no-repeat; background-size: cover; }
+	.leaves .color2 { background: url('images/leaf2.png') no-repeat; background-size: cover; }
+	.leaves .color3 { background: url('images/leaf3.png') no-repeat; background-size: cover; }
+	.leaves .color4 { background: url('images/leaf3.png') no-repeat; background-size: cover; }
+
+	.circles .color0 { background-color: #f25920; }
+	.circles .color1 { background-color: #fdc60d; }
+	.circles .color2 { background-color: #24acea; }
+	.circles .color3 { background-color: #bbd52f; }
+	.circles .color4 { background-color: #1f897c; }
+
+</style>
+</head>
+
+<body class="rocks">
+	<div class="animationwrapper"></div>
+</body>
+</html>
